@@ -127,7 +127,7 @@ body {
 
 .hero {
   position: relative; /* Change to relative for overlay */
-  background-image: url('../imgs/DC-Cap-Hill-Night-HD.jpg'); /* Replace with actual image */
+  background-image: url('./DC-Cap-Hill-Night-HD.jpg'); /* Replace with actual image */
   background-size: cover;
   background-position: 50% 5%;
   width: 100%;
