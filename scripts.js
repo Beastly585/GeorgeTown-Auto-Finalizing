@@ -1,21 +1,16 @@
 // Toggle navigation menu for mobile view
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('nav ul');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navBar = document.querySelector('.nav-bar');
 
-// Optional: Smooth scroll for anchor links (if added in the future)
-const scrollLinks = document.querySelectorAll('a[href^="#"]');
-
-scrollLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+    menuToggle.addEventListener('click', function() {
+        navBar.classList.toggle('active'); // Toggle the 'active' class
+        console.log('Hamburger menu clicked'); // Log message to console
     });
 });
+
+
 
 let currentIndex = 0;
 
@@ -31,5 +26,9 @@ function showNextTestimonial() {
 testimonials[currentIndex].classList.add('active');
 
 // Rotate testimonials every 3 seconds
-setInterval(showNextTestimonial, 3000);
+setInterval(showNextTestimonial, 6000);
 
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('active');
+});
