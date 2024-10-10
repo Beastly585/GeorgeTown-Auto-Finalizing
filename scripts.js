@@ -1,14 +1,16 @@
 // Toggle navigation menu for mobile view
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
+
+    const menuToggle = document.querySelector('.hamburger');
     const navBar = document.querySelector('.nav-bar');
 
-    menuToggle.addEventListener('click', function() {
-        navBar.classList.toggle('active'); // Toggle the 'active' class
+    menuToggle.addEventListener('click', (navBar) => 
+        navBar.classList.addClass('active');
         console.log('Hamburger menu clicked'); // Log message to console
-    });
-});
+    );
+
+
+
 
 
 

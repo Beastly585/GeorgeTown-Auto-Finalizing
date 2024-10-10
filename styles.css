@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #de2626; /* Light background for contrast */
+  background-image: linear-gradient(red, rgb(151, 18, 18)); /* Light background for contrast */
   position: relative;
   color: white;
   height: 60px;
@@ -77,15 +77,27 @@ body {
 
 .cta-button-header a {
   text-decoration: none;
-  color: #fff; /* White text */
-  background-color: #1b358a; /* Bootstrap's red color */
+  color: #004eca;
+  background-color: #ebfbff; 
+  border: solid 1px #004eca;
+  font-weight: 600;/* Bootstrap's red color */
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .cta-button-header a:hover {
-  background-color: #376ce8; /* Darker red on hover */
+  background-color: #1258c7;
+  color: rgb(255, 255, 255); /* arker red on hover */
+}
+
+.cta-button-header a:active {
+  background-color: #558ce4;
+  color: rgb(255, 255, 255);
+}
+
+.cta-button-header a:visited {
+  text-decoration: none;
 }
 
 .menu-toggle {
@@ -100,8 +112,6 @@ body {
   font-size: 24px; /* Size of hamburger icon */
   cursor: pointer;
 }
-
-
 
 .hero {
   position: relative; /* Change to relative for overlay */
@@ -131,6 +141,42 @@ body {
   z-index: 2;
 }
 
+.stand-out {
+  margin-top: 250px;
+}
+
+.hero-brag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: -5px;
+  color: white;
+  width: 40%;
+  max-width: 300px;
+  background-color: rgba(197, 190, 190, 0.354);
+  border-radius: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-brag a {
+  color: white;
+  line-height: 40px;
+}
+
+.hero-brag div {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+.hero-brag img {
+  width: 60px;
+  object-fit: contain;
+}
+
 .hero p {
   margin-bottom: 20px;
 }
@@ -145,6 +191,13 @@ body {
   text-decoration: none;
 }
 
+.cta-button:hover {
+  background-color: #1258c7;
+}
+.cta-button:active {
+  background-color: #4684e8;
+}
+
 .why-choose-us, .services-home, .testimonials, .cta-banner {
   padding: 60px 20px;
   text-align: center;
@@ -155,6 +208,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 
 .reason-item, .service-item {
   background: #f4f4f4; /* Light background for items */
@@ -167,6 +221,10 @@ body {
 .reason-item:hover, .service-item:hover {
   transform: scale(1.05); /* Scale effect on hover */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.country:hover {
+  transform: scale(1.05); 
 }
 
 .reason-item img, .service-grid img {
@@ -224,25 +282,47 @@ body {
 /* -----------FOOTER-------------- */
 
 footer {
-  background-color: #b22222; /* Dark Red */
+  background-image: linear-gradient(red,rgb(145, 9, 9)); /* Dark Red */
   color: white;
-  padding: 20px 0;
+  padding: 5px 0;
   text-align: center;
   margin: 0 auto;
+}
+
+.footer-small {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  align-items: center;
+}
+
+.footer-numbers1 {
+  display: none;
+}
+
+.footer-small button {
+  padding: 5px;
+  font-size: 1.2em;
+  color: white;
+  background-color: green;
+  border-radius: 4px;
+  border: none;
 }
 
 .footer-content {
   width: 96vw;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px; /* Spacing between footer items */
+  gap: 10px; /* Spacing between footer items */
 }
 
 .footer-left, .footer-center, .footer-right {
-  width: 30%; /* Ensure full width for better alignment */
+  text-align: center; /* Ensure full width for better alignment */
 }
 
 .footer-left {
@@ -250,8 +330,14 @@ footer {
   font-size: 0.8em;
 }
 
+.footer-left h3 {
+  color: white;
+  text-align: center;
+}
+
 .footer-left h4 {
-  margin-bottom: 10px; /* Space below the title */
+  margin-bottom: 10px;
+  text-align: center; /* Space below the title */
 }
 
 .social-links {
@@ -260,7 +346,8 @@ footer {
   justify-content: center; /* Center the social links */
   align-items: center;
   gap: 20px; /* Space between icons */
-  padding: 0; /* Remove default padding */
+  padding: 10px; /* Remove default padding */
+  border-radius: 4px;
 }
 
 .social-links img {
@@ -538,13 +625,11 @@ iframe {
 
 .info_body {
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 3fr 2fr;
-  grid-template-areas: "welcome" "address" "hours" "contact-info" "socials";
-  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
-  justify-content: space-around;
 }
 
 .info_wrapper {
@@ -587,12 +672,11 @@ iframe {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 
 .phone, .email-1, .work-time {
-  height: 25px;
   display: flex;
   align-items: start;
 }
@@ -607,21 +691,77 @@ iframe {
   margin-bottom: auto;
 }
 
+
+.svg_element-ui-hours {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.svg-clock {
+  width: 8%;
+  text-align: right;
+}
+
+.svg-clock img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.hours {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .svg_element-ui {
-  height: 25px;
+  width: 100%;
+  height: 40px;
   display: flex;
   justify-content: center;
   gap: 10px;
   align-items: center;
 }
 
-.svg_element-ui span {
+.svg_element-ui .phone-icon-container {
+  width: 10%;
+}
+
+.phone-icon {
+  height: 25px;
+  width: 100%;
+  object-fit: contain;
+}
+
+
+.svg_element-ui .phone-number {
+  width: 100%;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.svg_element-ui svg {
+  height: 25px;
+}
+
+.phone-number a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
 
 .phone .number, .email-1 a, .work-time .content {
   margin-left: 10px;
+}
+
+.email-1 a{
+  display: flex;
+  align-items: center;
 
 }
 
@@ -643,7 +783,7 @@ iframe {
 }
 
 .social {
-  margin-top: 15px;
+  margin: 10px auto;
   width: 90%;
   grid-area: socials;
 }
@@ -744,8 +884,6 @@ iframe {
   height: 40px;
 }
 
-
-
 .google-maps-container {
   width: 90%;
   margin: 40px auto;
@@ -768,6 +906,16 @@ iframe {
 
 
 @media (max-width: 480px) {
+
+.google-maps-container {
+  width: 100%;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
   .header {
     display: none;
   }
@@ -790,13 +938,13 @@ iframe {
     grid-template-columns: 1fr;
     grid-template-areas: "solo";
     width: 100%;
-    height: 60px;
+    height: 40px;
     position: relative;
     background-color: #de2626;
     max-height: 60px;
     overflow: visible;
     padding: 0 10px; /* Padding for sides */
-
+    margin-bottom: 90px;
   }
 
   .services-page {
@@ -805,10 +953,10 @@ iframe {
 
   .header-mob-container {
     grid-area: solo;
+    padding: 10px 0px;
     width: 100%;
-    display: flex;
-    justify-content: space-between; /* Align items */
-    align-items: center;
+    height: 100%;
+    line-height: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "hamburger logo logo contact"
@@ -829,6 +977,8 @@ iframe {
   .hamburger {
     width: 100%;
     height: 100%;
+    position: inherit;
+    z-index: 10001;
   }
 
   .menu-toggle span {
@@ -862,16 +1012,13 @@ iframe {
   .cta-button-header a {
     text-decoration: none;
     color: #fff; /* White text */
-    background-color: #d9534f; /* Bootstrap's red color */
+    background-color: #1358b9; /* Bootstrap's red color */
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.7em;
     transition: background-color 0.3s;
   }
 
-  .cta-button-header a:hover {
-    background-color: #c9302c; /* Darker red on hover */
-  }
 
   /* Navigation Styles */
   .nav-bar {
@@ -886,12 +1033,13 @@ iframe {
     z-index: 1000; /* Ensure it appears above other elements */
   }
 
-  .nav-bar.active {
+  .nav .active {
+    color: white;
     display: flex;
     width: 90%;
     height: 20px;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
      /* Show menu when active */
   }
@@ -906,14 +1054,148 @@ iframe {
   .nav-option:hover {
     background-color: #ffcccc; /* Light red on hover */
     color: #900000; /* Darker red on hover */
+
   }
 
+
+  .hero {
+  position: relative; /* Change to relative for overlay */
+  background-image: url('./DC-Cap-Hill-Night-HD.jpg'); /* Replace with actual image */
+  background-size: cover;
+  background-position: 50% 5%;
+  width: 100%;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  height: 70vh;
+  overflow: hidden;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    margin-top: 20px;
+  }
+  .hero-brag {
+    width: 80px;
+  }
+  .hero-brag a {
+    display: block;
+    color: white;
+    min-width:800px;
+  }
+  
+  .hero-brag div {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .hero-brag img {
+    width: 60px;
+    object-fit: contain;
+  }
+
+  .brag-stars{
+    min-width: 60px;
+  }
+
+  /* ------------------SERVICES PAGE --------------------------- */
+
+.services-car-types {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.car-section {
+  width: 90vw;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  padding-top: 10px;
+  background-color: #bbbbbb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-section h3 {
+  color: #3e3e3e; /* Dark Red */
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+
+.country {
+  margin: 5px auto 20px auto;
+  width: 80%;
+  background-color: #ebebeb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+
+.country h4 {
+  margin-top: 5px;
+  color: #535353; /* Lighter Red */
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.car-brands {
+  list-style: none;
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.car-brands li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: top;
+  overflow: hidden;
+  font-size: 0.5em;
+  width: 80px;
+}
+
+.car-brands img {
+  height: auto; /* Adjust logo size */
+  width: 100%;
+  height: 65px;
+  object-fit: contain;
+  object-position: center;
+  margin-bottom: 5px;
+}
   /* ------------------ FOOTER MEDIA QUERIES ----------------------*/
 
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .footer-content div {
+    width: 100%;
+    text-align: center;
+  }
   .social-links {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; /* Center the social links */
     align-items: center;
     gap: 20px; /* Space between icons */
@@ -924,14 +1206,16 @@ iframe {
     width: 40px; /* Uniform size for icons */
     transition: transform 0.3s ease; /* Smooth scaling effect */
   }
+
+  .footer-center {
+    width: 100%;
+    font-size: 0.7em;
+    opacity: 0.8;
+  }
   
   .social-links .yelp img{
     width: 90px;
     object-fit: contain;
-  }
-  
-  .social-links img:hover {
-    transform: scale(1.1); /* Scale effect on hover */
   }
   
   .footer-right {
@@ -941,5 +1225,34 @@ iframe {
   .footer-center {
     font-size: 0.9em; /* Smaller font for copyright text */
   }
+
+  .footer-numbers1 {
+    display: none;
+  }
+
+  .footer-small {
+    margin: 5px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+  }
   
+  .footer-small button {
+    background-color: transparent;
+    width: 160px;
+    height: 25px;
+    border: solid 1px white;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+  .footer-small button:hover {
+    background-color: #ff7c7c;
+  }
+
 }
