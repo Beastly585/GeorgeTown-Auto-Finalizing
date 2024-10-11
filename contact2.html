@@ -23,8 +23,7 @@
 
 <body class="contact-body">
 
-   <!-- Header Section -->
-   <header>
+  <header>
     <div class="header">
       <div class="logo">
         <a href="index.html"><img src="./GTA-Oval-Logo.png" alt="Georgetown Auto"></a> <!-- Replace with actual logo -->
@@ -40,18 +39,14 @@
       <div class="cta-button-header">
         <a href="contact2.html">CONTACT</a>
       </div>
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </header>
 
   <header class="header-mobile">
     <div class="header-mob-container">
       <div class="menu-toggle">
-        <div class="hamburger">&equiv;</div>
+        <input type="checkbox" class="menu-toggle-mystery">
+        <div class="hamburger"></div>
         <div class="nav">
           <ul class="nav-bar">
             <li><a href="index.html" class="nav-option">Home</a></li>
@@ -103,7 +98,7 @@
                           <img src="./imgs/phone-icon.png" class="phone-icon" alt="call us - link to call office">
                         </div>
                         <div class="phone-number">
-                          <a href="tel:202-965-3123"><span class="number"><strong>Bobby</strong> (202) 965-3123</span></a>
+                          <a href="tel:202-965-3123"><span class="number"><strong>DC Office</strong> (202) 965-3123</span></a>
                         </div>
                       </div>
                     </div>
@@ -113,7 +108,7 @@
                           <img src="./imgs/phone-icon.png" class="phone-icon" alt="call us - link to call office">
                         </div>
                         <div class="phone-number">
-                          <a href="tel:571-970-4010"><span class="number"><strong>Office</strong> (571) 970-4010</span></a>
+                          <a href="tel:571-970-4010"><span class="number"><strong>VA Office</strong> (571) 970-4010</span></a>
                         </div>
                       </div>
                     </div>
@@ -144,9 +139,12 @@
         
         <div class="col-12 col-lg-8">
         
-        </form>
-          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        
+          <form class="contact-form" id="form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="e0b83f4f-f231-4e05-ab52-d282b6ea423c">
+            <!-- Default URL -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
             <div class="contact-title">
               <h3 class="page_title">Contact Us</h3>
             </div>
@@ -185,12 +183,11 @@
       <div class="footer-left">
         <h3>Georgetown Auto</h3>
         <h4>418 E Raymond Ave, Alexandria, VA 22301</h4>
-        <p class="footer-numbers1"><strong>Bobby</strong> (202) 965-3123</p>
-        <p class="footer-numbers1"><strong>Office</strong> (571) 970-4010</p>
+        <p class="footer-numbers1"><strong>DC Office</strong> (202) 965-3123</p>
+        <p class="footer-numbers1"><strong>VA Office</strong> (571) 970-4010</p>
         <div class="footer-small">
-          <button class=""><a href="tel:+12029653123" style="text-decoration: none; color: white;">(202) 965-3123</a></button>
-          <button class=""><a href="tel:+15719704010" style="text-decoration: none; color: white;">(571) 970-4010</a></button>
-        </div>
+          <button class=""><a href="tel:+12029653123" style="text-decoration: none; color: white;"><strong>DC Office</strong><br>(202) 965-3123</a></button>
+          <button class=""><a href="tel:+15719704010" style="text-decoration: none; color: white;"><strong>Virginia Office</strong><br>(571) 970-4010</a></button>        </div>
         <ul class="social-links">
           <li><a class="yelp" href="https://www.yelp.com/biz/georgetown-auto-service-alexandria-2" target="_blank"><img src="./imgs/yelp_logo.png" alt="Yelp"></a></li>
           <li><a href="https://www.facebook.com/GeorgetownAuto.us" target="_blank"><img src="./Facebook_Logo_Primary.png"
