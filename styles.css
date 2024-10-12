@@ -1307,13 +1307,11 @@ iframe {
   }
   
   .footer-small button {
-    background-color: transparent;
     width: 160px;
-    height: 25px;
-    border: solid 1px white;
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
+    margin-bottom: 10px;
   }
 
   .footer-small button:hover {
